@@ -1,7 +1,7 @@
 ## JWT_IO
 
 [![pub](https://img.shields.io/pub/v/jwt_io)](https://pub.dartlang.org/packages/jwt_io)
-[![build](https://www.travis-ci.com/glynskyi/jwt_io.svg?branch=master)](https://travis-ci.com/dmytro-glynskyi/jwt_io)
+[![build](https://www.travis-ci.com/glynskyi/jwt_io.svg?branch=master)](https://travis-ci.com/glynskyi/jwt_io)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
