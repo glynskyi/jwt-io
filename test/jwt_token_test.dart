@@ -7,8 +7,16 @@ const expiredToken =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjE1MjYyMzkwMjJ9.GMdV0dx1F8rZuHUebeXL5tR2DROlc03IuDc2DeDTExI";
 
 void main() {
-  test("Decode a valid token", () {
+  test("Decode a header", () {
+    expect(JwtToken.header(token)["alg"], "HS256");
+    expect(JwtToken.header(token)["typ"], "JWT");
+  });
+
+  test("Decode a payload", () {
     expect(JwtToken.payload(token)["name"], "Gustavo");
+    expect(JwtToken.payload(token)["sub"], "1234567890");
+    expect(JwtToken.payload(token)["iat"], 1516239022);
+    expect(JwtToken.payload(token)["exp"], 4734615858);
   });
 
   test("isExpired? Valid and no expired token", () {
